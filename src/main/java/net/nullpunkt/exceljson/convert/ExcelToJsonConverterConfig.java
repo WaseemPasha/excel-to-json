@@ -9,6 +9,7 @@ import org.apache.commons.cli.CommandLine;
 public class ExcelToJsonConverterConfig {
 
 	private String sourceFile;
+	private String destinationFile;
 	private boolean parsePercentAsFloats = false;
 	private boolean omitEmpty = false;
 	private boolean pretty = false;
@@ -26,7 +27,9 @@ public class ExcelToJsonConverterConfig {
 		if(cmd.hasOption("s")) {
 			config.sourceFile = cmd.getOptionValue("s");
 		}
-
+        if(cmd.hasOption("d")) {
+            config.destinationFile = cmd.getOptionValue("d");
+        }
 		if(cmd.hasOption("df")) {
 			config.formatDate = new SimpleDateFormat(cmd.getOptionValue("df"));
 		}
@@ -138,4 +141,8 @@ public class ExcelToJsonConverterConfig {
 	public void setFillColumns(boolean fillColumns) {
 		this.fillColumns = fillColumns;
 	}
+
+	public String getDestinationFile() { return destinationFile; }
+
+	public void setDestinationFile(String destinationFile) { this.destinationFile = destinationFile; }
 }

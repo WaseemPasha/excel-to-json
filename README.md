@@ -1,11 +1,12 @@
 # excel-to-json
-Command line utility to convert excel files (all of them) to json. Uses Apache POI (https://poi.apache.org) to convert files. I use this tool within php, since there are only implementations which are (a) too much memory consuming, (b) slow, or (c) don't support all required excel formats. 
+Command line utility to convert excel files (all of them) to json. Uses Apache POI (https://poi.apache.org) to convert files. 
 
 ## usage
 java -jar excel-to-json.jar -s sourcefile [options...]
 
 ```
 -s,--source <arg>   The source file which should be converted into json.
+-d,--destination <arg>   The destination file where the files should be stored.
 -?,--help           This help text.
 -df,--dateFormat    The template to use for fomatting dates into strings.
 -l,--rowLimit <arg>      Limit the max number of rows to read.
