@@ -3,4 +3,4 @@
 target
 .idea
 excel-to-json.iml
-classes/*
+excel_to_json_jar
