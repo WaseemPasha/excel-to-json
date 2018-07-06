@@ -1,4 +1,4 @@
-# excel-to-json
+# excel-to-jsons
 Command line utility to convert excel files (all of them) to json. Uses Apache POI (https://poi.apache.org) to convert files. 
 
 ## usage
